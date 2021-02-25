@@ -16,6 +16,13 @@ Review.delete_all
 
 sf = Location.create(name: "San Francisco")
 
+user1 = User.create(name: "Ryan", email: "ryan@gmail.com", password: "123", also_artist: true, budget: 7, location_id: sf.id)
+
+artist1 = Artist.create(name: "The fun band", artist_type: "band", price: 800, bio: "we are a wonderful band", video_url:"www.cool.com", genre: "rock", event_type: "weddings mostly", location_id: sf.id)
+
+
+
+
 
 
 
