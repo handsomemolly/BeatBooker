@@ -5,3 +5,25 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Location.delete_all
+User.delete_all
+Artist.delete_all
+Booking.delete_all
+Review.delete_all
+
+
+
+sf = Location.create(name: "San Francisco")
+
+
+
+
+
+
+
+
+
+
+
+puts "seeds updated"
