@@ -14,11 +14,17 @@ Review.delete_all
 
 
 
+
 sf = Location.create(name: "San Francisco")
 
 user1 = User.create(name: "Ryan", email: "ryan@gmail.com", password: "123", also_artist: true, budget: 7, location_id: sf.id)
 
 artist1 = Artist.create(name: "The fun band", artist_type: "band", price: 800, bio: "we are a wonderful band", video_url:"www.cool.com", genre: "rock", event_type: "weddings mostly", location_id: sf.id)
+
+booking1 = Booking.create(event_date: '3/12/2021', event_type: 'wedding', number_of_attendees: 70, user_id: user1.id, artist_id: artist1.id)
+
+
+
 
 
 
