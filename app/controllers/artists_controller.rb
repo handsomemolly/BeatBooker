@@ -15,9 +15,6 @@ class ArtistsController < ApplicationController
     end
 
 
-
-
-
     private
 
     def artist_params
