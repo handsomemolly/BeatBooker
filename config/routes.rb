@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  post '/login', to: 'auth#create'
+  get '/profile', to: 'users#profile'
+  post '/sign_up', to: 'users#create'
   resources :reviews
   resources :bookings
   resources :artists
