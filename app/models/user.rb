@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    belongs_to :location
+    # belongs_to :location
     has_many :bookings, :dependent => :destroy
     has_many :reviews, :dependent => :destroy
     has_many :booked_artists, through: :bookings, source: :artist

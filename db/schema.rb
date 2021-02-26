@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_26_003813) do
+ActiveRecord::Schema.define(version: 2021_02_24_234426) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 2021_02_26_003813) do
     t.string "event_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "location_id", null: false
-    t.index ["location_id"], name: "index_artists_on_location_id"
   end
 
   create_table "bookings", force: :cascade do |t|
@@ -59,22 +57,17 @@ ActiveRecord::Schema.define(version: 2021_02_26_003813) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string "name"
+    t.string "username"
     t.string "email"
-    t.string "password"
+    t.string "password_digest"
     t.boolean "also_artist"
     t.integer "budget"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "location_id", null: false
-    t.string "username"
-    t.index ["location_id"], name: "index_users_on_location_id"
   end
 
-  add_foreign_key "artists", "locations"
   add_foreign_key "bookings", "artists"
   add_foreign_key "bookings", "users"
   add_foreign_key "reviews", "artists"
   add_foreign_key "reviews", "users"
-  add_foreign_key "users", "locations"
 end

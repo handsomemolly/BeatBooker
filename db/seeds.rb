@@ -79,5 +79,4 @@ ivy_hill_entertainment = Artist.create(name: "Ivy Hill Entertainment", artist_ty
 
 
 
-
 puts "seeds updated"
