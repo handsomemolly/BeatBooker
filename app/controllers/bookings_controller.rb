@@ -1,16 +1,17 @@
 class BookingsController < ApplicationController
+    skip_before_action :authorized
     def index
         bookings = Booking.all 
         render json: bookings
     end
 
-    def new
-        booking = Booking.new
-        render json: booking
-    end
+    # def new
+    #     booking = Booking.new
+    #     render json: booking
+    # end
 
     def create
-        booking = Booking.create(booking_parmas)
+        booking = Booking.create(booking_params)
         render json: booking
     end
 
@@ -32,3 +33,4 @@ class BookingsController < ApplicationController
     end
 
 end
+
