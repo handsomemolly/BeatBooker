@@ -7,9 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Location.delete_all
-User.delete_all
-Artist.delete_all
 Booking.delete_all
+Artist.delete_all
+User.delete_all
+
+
 Review.delete_all
 
 
