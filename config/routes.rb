@@ -2,10 +2,11 @@ Rails.application.routes.draw do
   resources :artists
   resources :users
   resources :bookings
+  resources :reviews
   post '/login', to: 'auth#create'
   get '/profile', to: 'users#profile'
   post '/sign_up', to: 'users#create'
-  # resources :reviews
+  
   
   
   # resources :locations

@@ -7,12 +7,13 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Location.delete_all
+Review.delete_all
 Booking.delete_all
 Artist.delete_all
 User.delete_all
 
 
-Review.delete_all
+
 
 
 
@@ -20,6 +21,9 @@ Review.delete_all
 sf = Location.create(name: "San Francisco")
 
 user1 = User.create(username: "Ryan", email: "ryan@gmail.com", password: "123", also_artist: true, budget: 7)
+user2 = User.create(username: "Calvin", email: "c@gmail.com", password: "123", also_artist: true, budget: 7)
+user3 = User.create(username: "Grover", email: "g@gmail.com", password: "123", also_artist: true, budget: 7)
+user4 = User.create(username: "Malmamute", email: "m@gmail.com", password: "123", also_artist: true, budget: 7)
 
 # artist1 = Artist.create(name: "The fun band", artist_type: "band", price: 800, bio: "we are a wonderful band", video_url:"www.cool.com", genre: "rock", event_type: "weddings mostly")
 
@@ -64,7 +68,10 @@ ivy_hill_entertainment = Artist.create(name: "Ivy Hill Entertainment", artist_ty
 
 # booking1 = Booking.create(event_date: '3/12/2021', event_type: 'wedding', number_of_attendees: 70, user_id: user1.id, artist_id: artist1.id)
 
-# review1 = Review.create(description: "what a delightful bunch", rating: 4, user_id: user1.id, artist_id: artist1.id)
+review1 = Review.create(description: "what a delightful bunch.", rating: 4, user_id: user1.id, artist_id: garuda_blue.id)
+review2 = Review.create(description: "very trendy, very modest, very erotic.", rating: 5, user_id: user2.id, artist_id: garuda_blue.id)
+review3 = Review.create(description: "stinky like poo poo in my pants.", rating: 1, user_id: user3.id, artist_id: garuda_blue.id) 
+review4 = Review.create(description: "within the opening moments, I knew I was in for a treat. The mushrooms were hitting harder than they usually do and their celine dion cover made me feel like i was standing at the bow of the titanic. I cried, I laughed. I went number two inside my slacks. Incredible.", rating: 5, user_id: user4.id, artist_id: garuda_blue.id) 
 
 
 
