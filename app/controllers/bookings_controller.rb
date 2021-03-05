@@ -5,6 +5,11 @@ class BookingsController < ApplicationController
         render json: bookings
     end
 
+    def show
+        booking = Booking.find_by(id: params[:id])
+        render json: booking
+    end
+
     # def new
     #     booking = Booking.new
     #     render json: booking
