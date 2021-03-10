@@ -21,7 +21,8 @@ class BookingsController < ApplicationController
     end
 
     def update
-        booking = Booking.update(booking_params)
+        booking = Booking.find_by(id: params[:id])
+        booking.update(booking_params)
         render json: booking
     end
 
